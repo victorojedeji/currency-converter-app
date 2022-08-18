@@ -1,178 +1,436 @@
-AED: 3.6725
-AFN: 90.0828
-ALL: 115.3698
-AMD: 405.478
-ANG: 1.79
-AOA: 430.6492
-ARS: 134.5234
-AUD: 1.4249
-AWG: 1.79
-AZN: 1.6975
-BAM: 1.9235
-BBD: 2
-BDT: 94.2288
-BGN: 1.9244
-BHD: 0.376
-BIF: 2024.8543
-BMD: 1
-BND: 1.3792
-BOB: 6.9236
-BRL: 5.1164
-BSD: 1
-BTN: 79.2293
-BWP: 12.574
-BYN: 2.5517
-BZD: 2
-CAD: 1.2867
-CDF: 1996.1992
-CHF: 0.9496
-CLP: 881.0582
-CNY: 6.7854
-COP: 4165.1436
-CRC: 669.263
-CUP: 24
-CVE: 108.4408
-CZK: 24.1735
-DJF: 177.721
-DKK: 7.337
-DOP: 54.3112
-DZD: 142.8046
-EGP: 19.1335
-ERN: 15
-ETB: 52.4605
-EUR: 0.9835
-FJD: 2.1756
-FKP: 0.8282
-FOK: 7.337
-GBP: 0.8282
-GEL: 2.793
-GGP: 0.8282
-GHS: 9.9521
-GIP: 0.8282
-GMD: 54.5049
-GNF: 8588.3399
-GTQ: 7.7508
-GYD: 208.2376
-HKD: 7.8447
-HNL: 24.6692
-HRK: 7.4098
-HTG: 125.939
-HUF: 396.8452
-IDR: 14728.4712
-ILS: 3.2689
-IMP: 0.8282
-INR: 79.2304
-IQD: 1452.6594
-IRR: 41932.4901
-ISK: 138.4579
-JEP: 0.8282
-JMD: 151.4834
-JOD: 0.709
-JPY: 134.1542
-KES: 119.7638
-KGS: 82.3894
-KHR: 4084.2327
-KID: 1.4249
-KMF: 483.8287
-KRW: 1309.9225
-KWD: 0.2996
-KYD: 0.8333
-KZT: 476.5773
-LAK: 17166.9289
-LBP: 1507.5
-LKR: 353.9436
-LRD: 153.5197
-LSL: 16.3958
-LYD: 4.8504
-MAD: 10.4322
-MDL: 19.2375
-MGA: 4102.6006
-MKD: 60.3137
-MMK: 2085.5197
-MNT: 3179.766
-MOP: 8.0801
-MRU: 37.5389
-MUR: 44.7858
-MVR: 15.4259
-MWK: 1036.2506
-MXN: 19.9068
-MYR: 4.4545
-MZN: 64.4974
-NAD: 16.3958
-NGN: 418.8657
-NIO: 36.0421
-NOK: 9.6873
-NPR: 126.7668
-NZD: 1.5776
-OMR: 0.3845
-PAB: 1
-PEN: 3.8593
-PGK: 3.5208
-PHP: 55.8084
-PKR: 213.519
-PLN: 4.5993
-PYG: 6904.8061
-QAR: 3.64
-RON: 4.802
-RSD: 115.5472
-RUB: 61.0925
-RWF: 1065.5524
-SAR: 3.75
-SBD: 8.0037
-SCR: 13.2114
-SDG: 565.0533
-SEK: 10.3523
-SGD: 1.3792
-SHP: 0.8282
-SLE: 13.9193
-SLL: 13919.3027
-SOS: 565.8574
-SRD: 24.8097
-SSP: 645.5461
-STN: 24.0947
-SYP: 2514.0524
-SZL: 16.3958
-THB: 35.4407
-TJS: 10.2544
-TMT: 3.4999
-TND: 2.9108
-TOP: 2.3146
-TRY: 17.9377
-TTD: 6.7477
-TVD: 1.4249
-TWD: 29.911
-TZS: 2328.6064
-UAH: 36.8728
-UGX: 3780.3499
-USD: 1
-UYU: 40.3631
-UZS: 10961.6491
-VES: 5.97
-VND: 23390.8711
-VUV: 116.4195
-WST: 2.6238
-XAF: 645.1049
-XCD: 2.7
-XDR: 0.7598
-XOF: 645.1049
-XPF: 117.3578
-YER: 250.2242
-ZAR: 16.3954
-ZMW: 16.0746
-ZWL: 487.9121
+const country = [
+    {
+        country: "united arab emirates",
+        code: "AED",
+        currency: "UAE Dirham",
+    },
+    {
+        country: "afghanistan",
+        code: "AFN",
+        currency: "Afghani",
+    },
+    {
+        country: "albania",
+        code: "ALL",
+        currency: "Lek",
+    },
+    {
+        country: "armenia",
+        code: "AMD",
+        currency: "Armenian Dram",
+    },
+    {
+        country: "angola",
+        code: "AOA",
+        currency: "Kwanza",
+    },
+    {
+        country: "argentina",
+        code: "ARS",
+        currency: "Argentine Peso",
+    },
+    {
+        country: "australia",
+        code: "AUD",
+        currency: "Australian Dollar",
+    },
+    {
+        country: "aruba",
+        code: "AWG",
+        currency: "Aruban Florin",
+    },
+    {
+        country: "azerbaijan",
+        code: "AWG",
+        currency: "Azerbaijanian Manat",
+    },
+    {
+        country: "bosnia and herzergovinia",
+        code: "AWG",
+        currency: "Convertible Mark",
+    },
+    {
+        country: "barbados",
+        code: "BBD",
+        currency: "Barbados Dollar",
+    },
+    {
+        country: "bangladesh",
+        code: "BDT",
+        currency: "Taka",
+    },
+    {
+        country: "bulgarian",
+        code: "BGN",
+        currency: "Bulgarian Lev",
+    },
+    {
+        country: "bulgarian",
+        code: "BGN",
+        currency: "Bulgarian Lev",
+    },
+    {
+        country: "bahrain",
+        code: "BHD",
+        currency: "Bahraini Dinar",
+    },
+    {
+        country: "burundi",
+        code: "BIF",
+        currency: "Burundi Franc",
+    },
+    {
+        country: "bermudia",
+        code: "BMD",
+        currency: "Bermudian Dollar",
+    },
+    {
+        country: "Brunei",
+        code: "BMD",
+        currency: "Brunei Dollar",
+    },
+    {
+        country: "bolivia",
+        code: "BMD",
+        currency: "Boliviano",
+    },
+    {
+        country: "brazil",
+        code: "BRL",
+        currency: "Brazilian Real",
+    },
+    {
+        country: "bahamian",
+        code: "BSD",
+        currency: "Bahamian Dollar",
+    },
+    {
+        country: "bhutan",
+        code: "BTN",
+        currency: "Ngultrum",
+    },
+    {
+        country: "botwana",
+        code: "BWP",
+        currency: "Pula",
+    },
+    {
+        country: "belarussia",
+        code: "BYN",
+        currency: "Belarussian Ruble",
+    },
+    {
+        country: "canada",
+        code: "CAD",
+        currency: "Canadian Dollar",
+    },
+    {
+        country: "switzerland",
+        code: "CHF",
+        currency: "Swiss Franc",
+    },
+    {
+        country: "chilea",
+        code: "CLP",
+        currency: "Chilean Peso",
+    },
+    {
+        country: "china",
+        code: "CNY",
+        currency: "Yuan Renminbi",
+    },
+    {
+        country: "colombian",
+        code: "COP",
+        currency: "Colombian Peso",
+    },
+    {
+        country: "costa rica",
+        code: "CRC",
+        currency: "costa rican colon",
+    },
+    {
+        country: "cuba",
+        code: "CUP",
+        currency: "Cuban Peso",
+    },
+    {
+        country: "cabo verde escudo",
+        code: "CVE",
+        currency: "Cabo Verde Escudo",
+    },
+    {
+        country: "czech republic",
+        code: "CVE",
+        currency: "Czech Koruna",
+    },
+    {
+        country: "djibouti",
+        code: "CVE",
+        currency: "Djibouti Franc",
+    },
+    {
+        country: "denmark",
+        code: "DKK",
+        currency: "Danish Krone",
+    },
+    {
+        country: "dominican republic",
+        code: "DKK",
+        currency: "Dominican Peso",
+    },
+    {
+        country: "algerian",
+        code: "DZD",
+        currency: "Algerian Dinar",
+    },
+    {
+        country: "eritrea",
+        code: "ERN",
+        currency: "Nakfa",
+    },
+    {
+        country: "ethiopia",
+        code: "ETB",
+        currency: "Ethiopian Birr",
+    },
+    {
+        country: "europian union",
+        code: "EUR",
+        currency: "Euro",
+    },
+    {
+        country: "fiji",
+        code: "FJD",
+        currency: "Fiji Dollar",
+    },
+    {
+        country: "united kingdom",
+        code: "GBP",
+        currency: "Pound Sterling",
+    },
+    {
+        country: "goergia",
+        code: "GEL",
+        currency: "Lari",
+    },
+    {
+        country: "ghana",
+        code: "GHS",
+        currency: "Ghana Cedi",
+    },
+    {
+        country: "gibraltar",
+        code: "GIP",
+        currency: "Gibraltar Pound",
+    },
+    {
+        country: "gambia",
+        code: "GMD",
+        currency: "Dalasi",
+    },
+    {
+        country: "guinea",
+        code: "GNF",
+        currency: "Guinea Franc",
+    },
+    {
+        country: "guatamela",
+        code: "GTQ",
+        currency: "Quetzal",
+    },
+    {
+        country: "guyana",
+        code: "GYD",
+        currency: "Guyana Dollar",
+    },
+    {
+        country: "hong kong",
+        code: "HKD",
+        currency: "Hong Kong Dollar",
+    },
+    {
+        country: "hong kong",
+        code: "HKD",
+        currency: "Hong Kong Dollar",
+    },
+]
+
+// AED: AE
+// AFN: AF
+// ALL: AL
+// AMD: AM
+ANG: AN
+// AOA: AO
+// ARS: AR
+// AUD: AU
+// AWG: AW
+// AZN: AZ
+// BAM: BA
+// BBD: BB
+// BDT: BD
+// BGN: BG
+// BHD: BH
+// BIF: BI
+// BMD: BM
+// BND: BN
+// BOB: BO
+// BRL: BR
+// BSD: BS
+// BTN: BT
+// BWP: BW
+// BYN: BY
+// BZD: BZ
+// CAD: CA
+// CDF: CD
+// CHF: CH
+// CLP: CL
+// CNY: CN
+// COP: CO
+// CRC: CR
+// CUP: CU
+// CVE: CV
+// CZK: CZ
+// DJF: DJ
+// DKK: DK
+// DOP: DO
+// DZD: DZ
+// EGP: EG
+// ERN: ER
+// ETB: ET
+// EUR: EU
+// FJD: FJ
+// FKP: FK
+FOK: FO
+// GBP: GB
+// GEL: GE
+GGP: GG
+// GHS: GH
+// GIP: GI
+// GMD: GM
+// GNF: GN
+// GTQ: GT
+// GYD: GY
+HKD: HK
+HNL: HN
+HRK: HR
+HTG: HTG
+HUF: HU
+IDR: ID
+ILS: IL
+IMP: IM
+INR: IN
+IQD: IQ
+IRR: IR
+ISK: IS
+JEP: JE
+JMD: JM
+JOD: JO
+JPY: JP
+KES: KE
+KGS: KG
+KHR: KH
+KID: KI
+KMF: KM
+KRW: KR
+KWD: KW
+KYD: KY
+KZT: KZ
+LAK: LA
+LBP: LB
+LKR: LK
+LRD: LR
+LSL: LS
+LYD: LY
+MAD: MA
+MDL: MD
+MGA: MG
+MKD: MK
+MMK: MM
+MNT: MN
+MOP: MO
+MRU: MR
+MUR: MU
+MVR: MV
+MWK: MW
+MXN: MX
+MYR: MY
+MZN: MZ
+NAD: NA
+NGN: NG
+NIO: NI
+NOK: NO
+NPR: NP
+NZD: NZ
+OMR: OM
+PAB: PA
+PEN: PE
+PGK: PG
+PHP: PH
+PKR: PK
+PLN: PL
+PYG: PY
+QAR: QA
+RON: RO
+RSD: RS
+RUB: RU
+RWF: RW
+SAR: SA
+SBD: SB
+SCR: SC
+SDG: SD
+SEK: SE
+SGD: SG
+SHP: SH
+SLE: SL
+SLL: SL
+SOS: SO
+SRD: SR
+SSP: SS
+STN: ST
+SYP: SY
+SZL: SZ
+THB: TH
+TJS: TJ
+TMT: TM
+TND: TN
+TOP: TO
+TRY: TR
+TTD: TT
+TVD: TV
+TWD: TW
+TZS: TZ
+UAH: UA
+UGX: UG
+USD: US
+UYU: UY
+UZS: UZ
+VES: VE
+VND: VN
+VUV: VU
+WST: WS
+XAF: XA
+XCD: XC
+XDR: XD
+XOF: XO
+XPF: XP
+YER : YE
+ZAR: ZA
+ZMW: ZM
+ZWL: ZW
 
 
 
 
 
-AFGHANISTAN	Afghani	AFN	971
+	Afghani	AFN	971
 ALBANIA	Lek	ALL	008
 ALGERIA	Algerian Dinar	DZD	012
 AMERICAN SAMOA	US Dollar	USD	840
 ANDORRA	Euro	EUR	978
 ANGOLA	Kwanza	AOA	973
 ANGUILLA	East Caribbean Dollar	XCD	951
-ANTARCTICA	No universal currency		
+		
 ANTIGUA AND BARBUDA	East Caribbean Dollar	XCD	951
 ARGENTINA	Argentine Peso	ARS	032
 ARMENIA	Armenian Dram	AMD	051
@@ -206,7 +464,7 @@ BURUNDI	Burundi Franc	BIF	108
 CABO VERDE	Cabo Verde Escudo	CVE	132
 CAMBODIA	Riel	KHR	116
 CAMEROON	CFA Franc BEAC	XAF	950
-CANADA	Canadian Dollar	CAD	124
+CANADA	Canadian DollarCAD		124
 CAYMAN ISLANDS (THE)	Cayman Islands Dollar	KYD	136
 CENTRAL AFRICAN REPUBLIC (THE)	CFA Franc BEAC	XAF	950
 CHAD	CFA Franc BEAC	XAF	950
