@@ -2,46 +2,55 @@ const country = [
     {
         country: "united arab emirates",
         code: "AED",
+        flag: "AE",
         currency: "UAE Dirham",
     },
     {
         country: "afghanistan",
         code: "AFN",
+        flag: "AF",
         currency: "Afghani",
     },
     {
         country: "albania",
         code: "ALL",
+        flag: "AL",
         currency: "Lek",
     },
     {
         country: "armenia",
         code: "AMD",
+        flag: "AM",
         currency: "Armenian Dram",
     },
     {
         country: "angola",
         code: "AOA",
+        flag: "AO",
         currency: "Kwanza",
     },
     {
         country: "argentina",
         code: "ARS",
+        flag: "AR",
         currency: "Argentine Peso",
     },
     {
         country: "australia",
         code: "AUD",
+        flag: "AU",
         currency: "Australian Dollar",
     },
     {
         country: "aruba",
         code: "AWG",
+        flag: "AW",
         currency: "Aruban Florin",
     },
     {
         country: "azerbaijan",
-        code: "AWG",
+        code: "AZN",
+        flag: "AZ",
         currency: "Azerbaijanian Manat",
     },
     {
