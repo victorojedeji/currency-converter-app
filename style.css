@@ -26,14 +26,28 @@ main {
 }
 
 h2 {
-    padding: .4em 0;
+    margin: .7em 0;
     text-align: center;
     text-transform: capitalize;
 }
 
-label, input {
+label, #input-field {
     display: block;
     margin-bottom: .7em;
+}
+
+#input-field {
+    width: 50%;
+    padding: .5em;
+    outline: none;
+    border: 1px solid #a3a2a2;
+    border-radius: .3em;
+}
+    
+#input-field:active,
+#input-field:focus {
+    outline: 2px solid #5f9ea0;
+    border: 1px solid #5f9ea0;
 }
 
 .pick {
@@ -44,22 +58,49 @@ label, input {
     margin-top: 2em;
 }
 
-.options-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.options-wrapper img {
-    width: 30px;
-}
-
 .what {
-    text-align: center;
     margin-bottom: 1em;
     text-transform: capitalize;
 }
 
+
+.options-wrapper {
+    display: flex;
+    border: 1px solid black;
+}
+
+.options-wrapper input {
+    width: 100%;
+    height: inherit;
+    padding: .3em;
+    margin: 0;
+}
+
+
+.options-wrapper img {
+    width: 50px;
+    border: 1px solid black;
+}
 .selected-currency-name {
     text-align: center;
+}
+
+.icon {
+    margin-top: 1em;
+}
+
+.fa-exchange {
+    transition: .5s;
+}
+.fa-exchange:hover,
+.fa-exchange:focus {
+    color: #5f9ea0;
+}
+
+.fa-exchange:active {
+    color: #113031;
+}
+
+.country-input {
+
 }
