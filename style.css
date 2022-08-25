@@ -64,23 +64,18 @@ label, #input-field {
 }
 
 
-.options-wrapper {
-    display: flex;
-    border: 1px solid black;
-}
 
 .options-wrapper input {
-    width: 100%;
-    height: inherit;
-    padding: .3em;
-    margin: 0;
+    
 }
 
 
 .options-wrapper img {
     width: 50px;
-    border: 1px solid black;
+    border-top-left-radius: .3em;
+    border-bottom-left-radius: .3em;
 }
+
 .selected-currency-name {
     text-align: center;
 }
@@ -102,5 +97,29 @@ label, #input-field {
 }
 
 .country-input {
+    border: none;
+    width: 100%;
+    height: inherit;
+    padding: .5em;
+    margin: 0;
+    border-radius: .3em;
+}
 
+.country-input:active,
+.country-input:focus {
+    outline: none;
+}
+
+.options-wrapper {
+    display: flex;
+    border: 1px solid #a3a2a2;
+    border-radius: .3em;
+    margin-bottom: .5em;
+}
+
+.options-wrapper:active,
+.options-wrapper:focus,
+.options-wrapper:hover {
+    outline: 2px solid #5f9ea0;
+    border: 1px solid #5f9ea0;
 }
