@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -11,47 +9,34 @@
     <body>
         
         <main> 
-            <h4>currency calculator</h4>
-            
-            
+            <h2>currency calculator</h2>
+
             <label for="input-field">Enter Amount</label>
             <input type="text" id="input-field" value="">
             
             
             <div class="pick">
-            <div class="option-section">
-                <p>from</p>
-                 <div class="options-wrapper">
-                    <img src = "https://countryflagsapi.com/svg/ng" />
-                    <select name="currency-options" id="currency-options">
-                        <option>NGN</option>
-                        <option>USD</option>
-                        <option>GBP</option>
-                        <option>AUD</option>
-                        <option>JPY</option>
-                    </select>
-                 </div>  
-                <p class="selected-currency-name">Naira</p>
-            </div>
-            
-            <div class="icon">
-                <i class="fas fa-exchange"></i>
-            </div>
-            
-            <div class="option-section">
-                <p>to</p>
-                 <div class="options-wrapper">
-                    <img src = "https://countryflagsapi.com/svg/us" />
-                    <select name="currency-options" id="currency-options">
-                        <option>USD</option>
-                        <option>NGN</option>
-                        <option>GBP</option>
-                        <option>AUD</option>
-                        <option>JPY</option>
-                    </select>
-                 </div>  
-                <p class="selected-currency-name">Us Dollars</p>
-            </div>
+                <div class="option-section">
+                    <p class="what">from</p>
+                    <div class="options-wrapper">
+                        <img src = "https://countryflagsapi.com/svg/ng" />
+                        <input type="text" value="Naira">
+                    </div>  
+                    <p class="selected-currency-name">Naira</p>
+                </div>
+                
+                <div class="icon">
+                    <i class="fas fa-exchange"></i>
+                </div>
+                
+                <div class="option-section">
+                    <p class="what">to</p>
+                    <div class="options-wrapper">
+                        <img src = "https://countryflagsapi.com/svg/us" />
+                        <input type="text" value="Us dollars">
+                    </div>  
+                    <p class="selected-currency-name">Us Dollars</p>
+                </div>
             </div>
 
         </main>
