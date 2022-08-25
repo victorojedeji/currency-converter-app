@@ -1,4 +1,4 @@
-const country = [
+let countryCodes = [
     {
         country: "united arab emirates",
         code: "AED",
@@ -55,968 +55,1086 @@ const country = [
     },
     {
         country: "bosnia and herzergovinia",
-        code: "AWG",
+        code: "BAM",
+        flag: "BA",
         currency: "Convertible Mark",
     },
     {
         country: "barbados",
         code: "BBD",
+        flag: "BB",
         currency: "Barbados Dollar",
     },
     {
         country: "bangladesh",
         code: "BDT",
+        flag: "BD",
         currency: "Taka",
     },
     {
         country: "bulgarian",
         code: "BGN",
-        currency: "Bulgarian Lev",
-    },
-    {
-        country: "bulgarian",
-        code: "BGN",
+        flag: "BG",
         currency: "Bulgarian Lev",
     },
     {
         country: "bahrain",
         code: "BHD",
+        flag: "BH",
         currency: "Bahraini Dinar",
     },
     {
         country: "burundi",
         code: "BIF",
+        flag: "BI",
         currency: "Burundi Franc",
     },
     {
-        country: "bermudia",
+        country: "bermuda",
         code: "BMD",
+        flag: "BM",
         currency: "Bermudian Dollar",
     },
     {
         country: "Brunei",
-        code: "BMD",
+        code: "BND",
+        flag: "BN",
         currency: "Brunei Dollar",
     },
     {
         country: "bolivia",
-        code: "BMD",
+        code: "BOV",
+        flag: "BO",
         currency: "Boliviano",
     },
     {
         country: "brazil",
         code: "BRL",
+        flag: "BR",
         currency: "Brazilian Real",
     },
     {
-        country: "bahamian",
+        country: "bahamas",
         code: "BSD",
+        flag: "BS",
         currency: "Bahamian Dollar",
     },
     {
         country: "bhutan",
         code: "BTN",
+        flag: "BT",
         currency: "Ngultrum",
     },
     {
-        country: "botwana",
+        country: "botswana",
         code: "BWP",
+        flag: "BW",
         currency: "Pula",
     },
     {
-        country: "belarussia",
+        country: "belarus",
         code: "BYN",
+        flag: "BY",
         currency: "Belarussian Ruble",
     },
     {
         country: "canada",
         code: "CAD",
+        flag: "CA",
         currency: "Canadian Dollar",
     },
     {
         country: "switzerland",
         code: "CHF",
+        flag: "CH",
         currency: "Swiss Franc",
     },
     {
-        country: "chilea",
+        country: "chile",
         code: "CLP",
+        flag: "CL",
         currency: "Chilean Peso",
     },
     {
         country: "china",
         code: "CNY",
+        flag: "CN",
         currency: "Yuan Renminbi",
     },
     {
-        country: "colombian",
+        country: "colombia",
         code: "COP",
+        flag: "CO",
         currency: "Colombian Peso",
     },
     {
         country: "costa rica",
         code: "CRC",
+        flag: "CR",
         currency: "costa rican colon",
     },
     {
         country: "cuba",
         code: "CUP",
+        flag: "CU",
         currency: "Cuban Peso",
     },
     {
-        country: "cabo verde escudo",
+        country: "cabo verde",
         code: "CVE",
+        flag: "CV",
         currency: "Cabo Verde Escudo",
     },
     {
         country: "czech republic",
-        code: "CVE",
+        code: "CZK",
+        flag: "CZ",
         currency: "Czech Koruna",
     },
     {
         country: "djibouti",
-        code: "CVE",
+        code: "DJF",
+        flag: "DJ",
         currency: "Djibouti Franc",
     },
     {
         country: "denmark",
         code: "DKK",
+        flag: "DK",
         currency: "Danish Krone",
     },
     {
         country: "dominican republic",
-        code: "DKK",
+        code: "DOP",
+        flag: "DO",
         currency: "Dominican Peso",
     },
     {
         country: "algerian",
         code: "DZD",
+        flag: "DZ",
         currency: "Algerian Dinar",
     },
     {
         country: "eritrea",
         code: "ERN",
+        flag: "ER",
         currency: "Nakfa",
     },
     {
         country: "ethiopia",
         code: "ETB",
+        flag: "ET",
         currency: "Ethiopian Birr",
     },
     {
         country: "europian union",
         code: "EUR",
+        flag: "EU",
         currency: "Euro",
     },
     {
         country: "fiji",
         code: "FJD",
+        flag: "FJ",
         currency: "Fiji Dollar",
     },
     {
         country: "united kingdom",
         code: "GBP",
+        flag: "GB",
         currency: "Pound Sterling",
     },
     {
         country: "goergia",
         code: "GEL",
+        flag: "GE",
         currency: "Lari",
     },
     {
         country: "ghana",
         code: "GHS",
+        flag: "GH",
         currency: "Ghana Cedi",
     },
     {
         country: "gibraltar",
         code: "GIP",
+        flag: "GI",
         currency: "Gibraltar Pound",
     },
     {
         country: "gambia",
         code: "GMD",
+        flag: "GM",
         currency: "Dalasi",
     },
     {
         country: "guinea",
         code: "GNF",
+        flag: "GN",
         currency: "Guinea Franc",
     },
     {
-        country: "guatamela",
+        country: "guatemala",
         code: "GTQ",
+        flag: "GT",
         currency: "Quetzal",
     },
     {
         country: "guyana",
         code: "GYD",
+        flag: "GY",
         currency: "Guyana Dollar",
     },
     {
         country: "hong kong",
         code: "HKD",
+        flag: "HK",
         currency: "Hong Kong Dollar",
     },
     {
         country: "honduras",
         code: "HNL",
+        flag: "HN",
         currency: "Lempira",
     },
     {
         country: "croatia",
         code: "HRK",
+        flag: "HR",
         currency: "Kuna",
     },
     {
         country: "haiti",
         code: "HTG",
+        flag: "HT",
         currency: "Gourde",
     },
     {
         country: "hungary",
         code: "HUF",
+        flag: "HU",
         currency: "Forint",
     },
     {
         country: "indenesia",
         code: "IDR",
+        flag: "ID",
         currency: "Rupiah",
     },
     {
         country: "isreal",
         code: "ILS",
+        flag: "IL",
         currency: "New Israeli Sheqel",
     },
     {
         country: "india",
         code: "INR",
+        flag: "IN",
         currency: "Indian Rupee",
     },
     {
         country: "iraq",
         code: "IQD",
+        flag: "IQ",
         currency: "Iraqi Dinar",
     },
     {
         country: "iran",
         code: "IRR",
+        flag: "IR",
         currency: "Iranian Rial",
     },
     {
         country: "iceland",
         code: "ISK",
+        flag: "IS",
         currency: "Iceland Krona",
     },
     {
-        country: "jamaican",
+        country: "jamaica",
         code: "JMD",
+        flag: "JM",
         currency: "Jamaican Dollar",
     },
     {
         country: "jordan",
         code: "JOD",
+        flag: "JO",
         currency: "Jordanian Dinar",
     },
     {
         country: "japan",
         code: "JPY",
+        flag: "JP",
         currency: "Yen",
     },
     {
         country: "kenya",
         code: "KES",
+        flag: "KE",
         currency: "Kenyan Shilling",
     },
     {
         country: "kyrgyzstan",
         code: "KGS",
+        flag: "KG",
         currency: "Som",
     },
     {
         country: "cambodia",
         code: "KHR",
+        flag: "KH",
         currency: "Riel",
     },
     {
         country: "comoros",
         code: "KMF",
+        flag: "KM",
         currency: "Comoro Franc",
     },
     {
-        country: "korea",
+        country: "the republic of korea",
         code: "KRW",
+        flag: "KR",
         currency: "Won",
     },
     {
         country: "kuwait",
         code: "KWD",
+        flag: "KW",
         currency: "Kuwaiti Dinar",
     },
     {
         country: "cayman islands",
         code: "KYD",
+        flag: "KY",
         currency: "Cayman Islands Dollar",
     },
     {
         country: "kazakhstan",
         code: "KZT",
+        flag: "KZ",
         currency: "Tenge",
     },
     {
         country: "lao people's democratic republic",
-        code: "KZT",
+        code: "LAK",
+        flag: "LA",
         currency: "Kip",
     },
     {
         country: "Lebanese",
         code: "LBP",
+        flag: "LB",
         currency: "Lebanese Pound",
     },
     {
         country: "sri lanka",
         code: "LKR",
+        flag: "LK",
         currency: "Sri Lanka Rupee",
     },
     {
         country: "liberia",
         code: "LRD",
+        flag: "LR",
         currency: "Liberian Dollar",
     },
     {
         country: "lesotho",
         code: "LSL",
+        flag: "LS",
         currency: "Loti",
     },
     {
         country: "libya",
         code: "LYD",
+        flag: "LY",
         currency: "Libyan Dinar",
     },
     {
         country: "moldova",
         code: "MDL",
+        flag: "MD",
         currency: "Moldovan Leu",
     },
     {
         country: "madagascar",
         code: "MGA",
+        flag: "MG",
         currency: "Malagasy Ariary",
     },
     {
         country: "north macedonia",
         code: "MKD",
+        flag: "MK",
         currency: "Denar",
     },
     {
         country: "myanmar",
         code: "MMK",
+        flag: "MM",
         currency: "Kyat",
     },
     {
         country: "mongolia",
         code: "MNT",
+        flag: "MN",
         currency: "Tugrik",
     },
     {
         country: "macao",
         code: "MOP",
+        flag: "MO",
         currency: "Pataca",
     },
     {
         country: "mauritius",
         code: "MRU",
+        flag: "MR",
         currency: "Mauritius Rupee",
     },
     {
         country: "maldives",
         code: "MVR",
+        flag: "MV",
         currency: "Rufiyaa",
     },
     {
         country: "malawi",
         code: "MWK",
+        flag: "MW",
         currency: "Kwacha",
     },
     {
         country: "mexico",
         code: "MXN",
+        flag: "MX",
         currency: "Mexican Peso",
     },
     {
         country: "malaysia",
         code: "MYR",
+        flag: "MY",
         currency: "Malaysian Ringgit",
     },
     {
         country: "mozambique",
         code: "MZN",
+        flag: "MZ",
         currency: "Mozambique Metical",
     },
     {
         country: "namibia",
         code: "NAD",
+        flag: "NA",
         currency: "Namibia Dollar",
     },
     {
         country: "nigeria",
         code: "NGN",
+        flag: "NG",
         currency: "Naira",
     },
     {
         country: "nicaragua",
         code: "NIO",
+        flag: "NI",
         currency: "Cordoba Oro",
     },
     {
         country: "norway",
         code: "NOK",
+        flsg: "NO",
         currency: "Norwegian Krone",
     },
     {
         country: "nepal",
         code: "NPR",
+        flag: "NP",
         currency: "Nepalese Rupee",
     },
     {
         country: "new zealand",
         code: "NZD",
+        flag: "NZ",
         currency: "New Zealand Dollar",
     },
     {
         country: "panama",
         code: "PAB",
+        flag: "PA",
         currency: "Balboa",
     },
     {
         country: "papua new guinea",
         code: "PEN",
+        flag: "PE",
         currency: "Kina",
     },
     {
         country: "philippines",
-        code: "PEN",
+        code: "PHP",
+        flag: "PH",
         currency: "Philippine Peso",
     },
     {
         country: "pakistan",
         code: "PKR",
+        flag: "PK",
         currency: "Pakistan Rupee",
     },
     {
         country: "poland",
         code: "PLN",
+        flag: "PL",
         currency: "Zloty",
     },
     {
         country: "paraguay",
         code: "PYG",
+        flag: "PY",
         currency: "Guarani",
     },
     {
         country: "qatar",
         code: "QAR",
+        flag: "QA",
         currency: "Qatari Rial",
     },
     {
         country: "romania",
         code: "RON",
+        flag: "RO",
         currency: "Romanian Leu",
     },
     {
         country: "serbian",
         code: "RSD",
+        flag: "RS",
         currency: "Serbian Dinar",
     },
     {
         country: "russian",
         code: "RUB",
+        flag: "RU",
         currency: "Russian Ruble",
     },
     {
         country: "rwanda",
         code: "RWF",
+        flag: "RW",
         currency: "Rwanda Franc",
     },
     {
         country: "saudi arabia",
-        code: "RWF",
+        code: "SAR",
+        flag: "SA",
         currency: "Saudi Riyal",
     },
     {
         country: "solomon islands",
         code: "SBD",
+        flag: "SB",
         currency: "Solomon Islands Dollar",
     },
     {
         country: "seychelles",
         code: "SCR",
+        flag: "SC",
         currency: "Seychelles Rupee",
     },
     {
         country: "sudan",
         code: "SDG",
+        flag: "SD",
         currency: "Sudanese Pound",
     },
     {
         country: "sweden",
         code: "SEK",
+        flag: "SE",
         currency: "Swedish Krona",
     },
     {
         country: "singapore",
         code: "SGD",
+        flag: "SG",
         currency: "Singapore Dollar",
     },
     {
         country: "sierra leone",
-        code: "SGD",
+        code: "SLE",
+        flag: "SL",
         currency: "leone",
     },
     {
         country: "somalia",
         code: "SOS",
+        flag: "SO",
         currency: "Somali Shilling",
     },
     {
         country: "suriname",
         code: "SRD",
+        flag: "SR",
         currency: "Surinam Dollar",
     },
     {
         country: "south sudanese",
         code: "SSP",
+        flag: "SS",
         currency: "South Sudanese Pound",
     },
     {
         country: "sao tome and principe",
-        code: "SSP",
+        code: "STN",
+        flag: "ST",
         currency: "Dobra",
     },
     {
         country: "syria",
         code: "SYP",
+        flag: "SYP",
         currency: "Syrian Pound",
     },
     {
         country: "swaziland",
         code: "SZL",
+        flag: "SZ",
         currency: "Lilangeni",
     },
     {
         country: "thailand",
         code: "THB",
+        flag: "TH",
         currency: "Baht",
     },
     {
         country: "tajikistan",
         code: "TJS",
+        flag: "TJ",
         currency: "Somoni",
     },
     {
         country: "turkmenistan",
         code: "TMT",
+        flag: "TM",
         currency: "Turkmenistan New Manat",
     },
     {
         country: "tunisia",
         code: "TND",
+        flag: "TN",
         currency: "Tunisian Dinar",
     },
     {
         country: "tonga",
         code: "TOP",
+        flag: "TO",
         currency: "Pa'anga",
     },
     {
         country: "turkey",
         code: "TRY",
+        flag: "TR",
         currency: "Turkish Lira",
     },
     {
         country: "trinidad and tobago",
         code: "TTD",
+        flag: "TT",
         currency: "Trinidad and Tobago Dollar",
     },
     {
         country: "taiwan",
         code: "TWD",
+        flag: "TW",
         currency: "New Taiwan Dollar",
     },
     {
         country: "tanzanian",
         code: "TZS",
+        flag: "TZS",
         currency: "Tanzanian Shilling",
     },
     {
         country: "ukraine",
         code: "UAH",
+        flag: "UA",
         currency: "Hryvnia",
     },
     {
         country: "uganda",
         code: "UGX",
+        flag: "UG",
         currency: "Uganda Shilling",
     },
     {
         country: "united states of america",
         code: "USD",
+        flag: "US",
         currency: "US Dollar",
     },
     {
         country: "uruguay",
         code: "UYU",
+        flag: "UY",
         currency: "Peso Uruguayo",
     },
     {
         country: "Uzbekistan",
         code: "UZS",
+        flag: "UZ",
         currency: "Uzbekistan Sum",
     },
     {
         country: "vietnam",
         code: "VND",
+        flag: "VN",
         currency: "Dong",
     },
     {
         country: "vanuatu",
         code: "VUV",
+        flag: "VU",
         currency: "Vatu",
     },
     {
         country: "samoa",
         code: "WST",
+        flag: "WS",
         currency: "Tala",
     },
     {
         country: "cameroon",
         code: "XAF",
+        flag: "CM",
         currency: "CFA Franc BEAC",
     },
     {
         country: "chad",
         code: "XAF",
+        flag: "TD",
         currency: "CFA Franc BEAC",
+    },
+    {
+        country: " democratic republic of congo",
+        code: "CDF",
+        flag: "CD",
+        currency: "Congolese franc",
     },
     {
         country: "congo",
         code: "XAF",
+        flag: "CG",
         currency: "CFA Franc BEAC",
     },
     {
-        country: "equitorial guinea",
+        country: "equatorial guinea",
         code: "XAF",
+        flag: "GQ",
         currency: "CFA Franc BEAC",
     },
     {
         country: "central african republic",
         code: "XAF",
+        flag: "CF",
         currency: "CFA Franc BEAC",
     },
     {
         country: "gabon",
         code: "XAF",
+        flag: "GA",
         currency: "CFA Franc BEAC",
     },
     {
         country: "anguilla",
         code: "XCD",
+        flag: "AI",
         currency: "East Caribbean Dollar",
     },
     {
         country: "antigua and barbuda",
         code: "XCD",
-        currency: "East Caribbean Dollar",
-    },
-    {
-        country: "dominica",
-        code: "XCD",
+        flag: "AG",
         currency: "East Caribbean Dollar",
     },
     {
         country: "grenada",
         code: "XCD",
+        flag: "GD",
         currency: "East Caribbean Dollar",
     },
     {
         country: "montserrat",
         code: "XCD",
+        flag: "MS",
         currency: "East Caribbean Dollar",
     },
     {
         country: "saint kitts and nevis",
         code: "XCD",
+        flag: "KN",
         currency: "East Caribbean Dollar",
     },
     {
         country: "saint lucia",
         code: "XCD",
+        flag: "LC",
         currency: "East Caribbean Dollar",
     },
     {
-        country: "saint vincent and te grenadines",
+        country: "saint vincent and the grenadines",
         code: "XCD",
-        currency: "East Caribbean Dollar",
-    },
-    {
-        country: "saint vincent and te grenadines",
-        code: "XCD",
+        flag: "VC",
         currency: "East Caribbean Dollar",
     },
     {
         country: "benin",
         code: "XOF",
+        flag: "XO",
         currency: "CFA Franc BCEAO",
     },
     {
         country: "burkina faso",
         code: "XOF",
+        flag: "XO",
         currency: "CFA Franc BCEAO",
     },
     {
         country: "cote d'voire",
         code: "XOF",
+        flag: "XO",
         currency: "CFA Franc BCEAO",
     },
     {
         country: "guinea-bissau",
         code: "XOF",
+        flag: "XO",
         currency: "CFA Franc BCEAO",
     },
     {
         country: "mali",
         code: "XOF",
+        flag: "XO",
         currency: "CFA Franc BCEAO",
     },
     {
         country: "niger",
         code: "XOF",
+        flag: "XO",
         currency: "CFA Franc BCEAO",
     },
     {
         country: "senegal",
         code: "XOF",
+        flag: "XO",
         currency: "CFA Franc BCEAO",
     },
     {
         country: "togo",
         code: "XOF",
+        flag: "XO",
         currency: "CFA Franc BCEAO",
     },
     {
         country: "french polynesia",
         code: "XPF",
+        flag: "XP",
         currency: "CFP Franc",
     },
     {
         country: "new caledonia",
         code: "XPF",
+        flag: "XP",
         currency: "CFP Franc",
     },
     {
         country: "wallis and futuna",
         code: "XPF",
-        currency: "CFP Franc",
-    },
-    {
-        country: "wallis and futuna",
-        code: "XPF",
+        flag: "XP",
         currency: "CFP Franc",
     },
     {
         country: "yemeni",
         code: "YER",
+        flag: "YE",
         currency: "Yemeni Rial",
     },
     {
         country: "south africa",
         code: "ZAR",
+        flag: "ZA",
         currency: "Rand",
     },
     {
         country: "zambian",
         code: "ZMW",
+        flag: "ZM",
         currency: "Zambian Kwacha",
     },
     {
         country: "zimbabwe",
         code: "ZWL",
+        flag: "ZM",
         currency: "Zimbabwe Dollar",
     },
-]
+    {
+        country: "france",
+        code: "EUR",
+        flag: "FR",
+        currency: "Euro",
+    },
+    {
+        country: "andorra",
+        code: "EUR",
+        flag: "AD",
+        currency: "Euro",
+    },
+    {
+        country: "belgium",
+        code: "EUR",
+        flag: "BE",
+        currency: "Euro",
+    },
+    {
+        country: "cyprus",
+        code: "EUR",
+        flag: "CY",
+        currency: "Euro",
+    },
+    {
+        country: "austria",
+        code: "EUR",
+        flag: "AT",
+        currency: "Euro",
+    },
+    {
+        country: "estonia",
+        code: "EUR",
+        flag: "EE",
+        currency: "Euro",
+    },
+    {
+        country: "finland",
+        code: "EUR",
+        flag: "FI",
+        currency: "Euro",
+    },
+    {
+        country: "french guiana",
+        code: "EUR",
+        flag: "GF",
+        currency: "Euro",
+    },
+    {
+        country: "germany",
+        code: "EUR",
+        flag: "DE",
+        currency: "Euro",
+    },
+    {
+        country: "greece",
+        code: "EUR",
+        flag: "GR",
+        currency: "Euro",
+    },
+    {
+        country: "guadeloupe",
+        code: "EUR",
+        flag: "GP",
+        currency: "Euro",
+    },
+    {
+        country: "ireland",
+        code: "EUR",
+        flag: "IE",
+        currency: "Euro",
+    },
+    {
+        country: "italy",
+        code: "EUR",
+        flag: "IT",
+        currency: "Euro",
+    },
+    {
+        country: "latvia",
+        code: "EUR",
+        flag: "LV",
+        currency: "Euro",
+    },
+    {
+        country: "lithuania",
+        code: "EUR",
+        flag: "LT",
+        currency: "Euro",
+    },
+    {
+        country: "luxembourg",
+        code: "EUR",
+        flag: "LU",
+        currency: "Euro",
+    },
+    {
+        country: "malta",
+        code: "EUR",
+        flag: "MT",
+        currency: "Euro",
+    },
+    {
+        country: "monaco",
+        code: "EUR",
+        flag: "MC",
+        currency: "Euro",
+    },
+    {
+        country: "netherlands",
+        code: "EUR",
+        flag: "NL",
+        currency: "Euro",
+    },
+    {
+        country: "montenegro",
+        code: "EUR",
+        flag: "ME",
+        currency: "Euro",
+    },
+    {
+        country: "portugal",
+        code: "EUR",
+        flag: "PT",
+        currency: "Euro",
+    },
+    {
+        country: "san marino",
+        code: "EUR",
+        flag: "SM",
+        currency: "Euro",
+    },
+    {
+        country: "slovakia",
+        code: "EUR",
+        flag: "SK",
+        currency: "Euro",
+    },
+    {
+        country: "slovenia",
+        code: "EUR",
+        flag: "SI",
+        currency: "Euro",
+    },
+    {
+        country: "spain",
+        code: "EUR",
+        flag: "ES",
+        currency: "Euro",
+    },
 
-
-
-
-
-
-
-
-// AED: AE
-// AFN: AF
-// ALL: AL
-// AMD: AM
-ANG: AN
-// AOA: AO
-// ARS: AR
-// AUD: AU
-// AWG: AW
-// AZN: AZ
-// BAM: BA
-// BBD: BB
-// BDT: BD
-// BGN: BG
-// BHD: BH
-// BIF: BI
-// BMD: BM
-// BND: BN
-// BOB: BO
-// BRL: BR
-// BSD: BS
-// BTN: BT
-// BWP: BW
-// BYN: BY
-// BZD: BZ
-// CAD: CA
-// CDF: CD
-// CHF: CH
-// CLP: CL
-// CNY: CN
-// COP: CO
-// CRC: CR
-// CUP: CU
-// CVE: CV
-// CZK: CZ
-// DJF: DJ
-// DKK: DK
-// DOP: DO
-// DZD: DZ
-// EGP: EG
-// ERN: ER
-// ETB: ET
-// EUR: EU
-// FJD: FJ
-// FKP: FK
-FOK: FO
-// GBP: GB
-// GEL: GE
-GGP: GG
-// GHS: GH
-// GIP: GI
-// GMD: GM
-// GNF: GN
-// GTQ: GT
-// GYD: GY
-// HKD: HK
-// HNL: HN
-// HRK: HR
-// HTG: HT
-// HUF: HU
-// IDR: ID
-// ILS: IL
-IMP: IM
-// INR: IN
-// IQD: IQ
-// IRR: IR
-// ISK: IS
-JEP: JE
-// JMD: JM
-// JOD: JO
-// JPY: JP
-// KES: KE
-// KGS: KG
-// KHR: KH
-KID: KI
-// KMF: KM
-// KRW: KR
-// KWD: KW
-// KYD: KY
-// KZT: KZ
-// LAK: LA
-// LBP: LB
-// LKR: LK
-// LRD: LR
-// LSL: LS
-// LYD: LY
-// MAD: MA
-// MDL: MD
-// MGA: MG
-// MKD: MK
-// MMK: MM
-// MNT: MN
-// MOP: MO
-// MRU: MR
-// MUR: MU
-// MVR: MV
-// MWK: MW
-// MXN: MX
-// MYR: MY
-// MZN: MZ
-// NAD: NA
-// NGN: NG
-// NIO: NI
-// NOK: NO
-// NPR: NP
-// NZD: NZ
-// OMR: OM
-// PAB: PA
-// PEN: PE
-// PGK: PG
-// PHP: PH
-// PKR: PK
-// PLN: PL
-// PYG: PY
-// QAR: QA
-// RON: RO
-// RSD: RS
-// RUB: RU
-// RWF: RW
-// SAR: SA
-// SBD: SB
-// SCR: SC
-// SDG: SD
-// SEK: SE
-// SGD: SG
-SHP: SH
-// SLE: SL
-SLL: SL
-// SOS: SO
-// SRD: SR
-// SSP: SS
-// STN: ST
-// SYP: SY
-// SZL: SZ
-// THB: TH
-// TJS: TJ
-// TMT: TM
-// TND: TN
-// TOP: TO
-// TRY: TR
-// TTD: TT
-TVD: TV
-// TWD: TW
-// TZS: TZ
-// UAH: UA
-// UGX: UG
-// USD: US
-// UYU: UY
-// UZS: UZ
-VES: VE
-// VND: VN
-// VUV: VU
-// WST: WS
-// XAF: XA
-// XCD: XC
-XDR: XD
-// XOF: XO
-// XPF: XP
-// YER : YE
-// ZAR: ZA
-// ZMW: ZM
-// ZWL: ZW
-
-
-
+];
 
 
 // 	Afghani	AFN	971
@@ -1288,3 +1406,263 @@ XDR: XD
 // ZAMBIA	Zambian Kwacha	ZMW	967
 // ZIMBABWE	Zimbabwe Dollar	ZWL	932
 // ÅLAND ISLANDS	Euro	EUR	
+
+
+
+
+
+
+
+
+
+
+// Country	Alpha-2 code	Alpha-3 code	Numeric
+// Afghanistan	AF	AFG	004
+// Albania	AL	ALB	008
+// Algeria	DZ	DZA	012
+// American Samoa	AS	ASM	016
+// Andorra	AD	AND	020
+// Angola	AO	AGO	024
+// Anguilla	AI	AIA	660
+// Antarctica	AQ	ATA	010
+// Antigua and Barbuda	AG	ATG	028
+// Argentina	AR	ARG	032
+// Armenia	AM	ARM	051
+// Aruba	AW	ABW	533
+// Australia	AU	AUS	036
+// Austria	AT	AUT	040
+// Azerbaijan	AZ	AZE	031
+// Bahamas (the)	BS	BHS	044
+// Bahrain	BH	BHR	048
+// Bangladesh	BD	BGD	050
+// Barbados	BB	BRB	052
+// Belarus	BY	BLR	112
+// Belgium	BE	BEL	056
+// Belize	BZ	BLZ	084
+// Benin	BJ	BEN	204
+// Bermuda	BM	BMU	060
+// Bhutan	BT	BTN	064
+// Bolivia (Plurinational State of)	BO	BOL	068
+// Bonaire, Sint Eustatius and Saba	BQ	BES	535
+// Bosnia and Herzegovina	BA	BIH	070
+// Botswana	BW	BWA	072
+// Bouvet Island	BV	BVT	074
+// Brazil	BR	BRA	076
+// British Indian Ocean Territory (the)	IO	IOT	086
+// Brunei Darussalam	BN	BRN	096
+// Bulgaria	BG	BGR	100
+// Burkina Faso	BF	BFA	854
+// Burundi	BI	BDI	108
+// Cabo Verde	CV	CPV	132
+// Cambodia	KH	KHM	116
+// Cameroon	CM	CMR	120
+// Canada	CA	CAN	124
+// Cayman Islands (the)	KY	CYM	136
+// Central African Republic (the)	CF	CAF	140
+// Chad	TD	TCD	148
+// Chile	CL	CHL	152
+// China	CN	CHN	156
+// Christmas Island	CX	CXR	162
+// Cocos (Keeling) Islands (the)	CC	CCK	166
+// Colombia	CO	COL	170
+// Comoros (the)	KM	COM	174
+// Congo (the Democratic Republic of the)	CD	COD	180
+// Congo (the)	CG	COG	178
+// Cook Islands (the)	CK	COK	184
+// Costa Rica	CR	CRI	188
+// Croatia	HR	HRV	191
+// Cuba	CU	CUB	192
+// Curaçao	CW	CUW	531
+// Cyprus	CY	CYP	196
+// Czechia	CZ	CZE	203
+// Côte d'Ivoire	CI	CIV	384
+// Denmark	DK	DNK	208
+// Djibouti	DJ	DJI	262
+// Dominica	DM	DMA	212
+// Dominican Republic (the)	DO	DOM	214
+// Ecuador	EC	ECU	218
+// Egypt	EG	EGY	818
+// El Salvador	SV	SLV	222
+// Equatorial Guinea	GQ	GNQ	226
+// Eritrea	ER	ERI	232
+// Estonia	EE	EST	233
+// Eswatini	SZ	SWZ	748
+// Ethiopia	ET	ETH	231
+// Falkland Islands (the) [Malvinas]	FK	FLK	238
+// Faroe Islands (the)	FO	FRO	234
+// Fiji	FJ	FJI	242
+// Finland	FI	FIN	246
+// France	FR	FRA	250
+// French Guiana	GF	GUF	254
+// French Polynesia	PF	PYF	258
+// French Southern Territories (the)	TF	ATF	260
+// Gabon	GA	GAB	266
+// Gambia (the)	GM	GMB	270
+// Georgia	GE	GEO	268
+// Germany	DE	DEU	276
+// Ghana	GH	GHA	288
+// Gibraltar	GI	GIB	292
+// Greece	GR	GRC	300
+// Greenland	GL	GRL	304
+// Grenada	GD	GRD	308
+// Guadeloupe	GP	GLP	312
+// Guam	GU	GUM	316
+// Guatemala	GT	GTM	320
+// Guernsey	GG	GGY	831
+// Guinea	GN	GIN	324
+// Guinea-Bissau	GW	GNB	624
+// Guyana	GY	GUY	328
+// Haiti	HT	HTI	332
+// Heard Island and McDonald Islands	HM	HMD	334
+// Holy See (the)	VA	VAT	336
+// Honduras	HN	HND	340
+// Hong Kong	HK	HKG	344
+// Hungary	HU	HUN	348
+// Iceland	IS	ISL	352
+// India	IN	IND	356
+// Indonesia	ID	IDN	360
+// Iran (Islamic Republic of)	IR	IRN	364
+// Iraq	IQ	IRQ	368
+// Ireland	IE	IRL	372
+// Isle of Man	IM	IMN	833
+// Israel	IL	ISR	376
+// Italy	IT	ITA	380
+// Jamaica	JM	JAM	388
+// Japan	JP	JPN	392
+// Jersey	JE	JEY	832
+// Jordan	JO	JOR	400
+// Kazakhstan	KZ	KAZ	398
+// Kenya	KE	KEN	404
+// Kiribati	KI	KIR	296
+// Korea (the Democratic People's Republic of)	KP	PRK	408
+// Korea (the Republic of)	KR	KOR	410
+// Kuwait	KW	KWT	414
+// Kyrgyzstan	KG	KGZ	417
+// Lao People's Democratic Republic (the)	LA	LAO	418
+// Latvia	LV	LVA	428
+// Lebanon	LB	LBN	422
+// Lesotho	LS	LSO	426
+// Liberia	LR	LBR	430
+// Libya	LY	LBY	434
+// Liechtenstein	LI	LIE	438
+// Lithuania	LT	LTU	440
+// Luxembourg	LU	LUX	442
+// Macao	MO	MAC	446
+// Madagascar	MG	MDG	450
+// Malawi	MW	MWI	454
+// Malaysia	MY	MYS	458
+// Maldives	MV	MDV	462
+// Mali	ML	MLI	466
+// Malta	MT	MLT	470
+// Marshall Islands (the)	MH	MHL	584
+// Martinique	MQ	MTQ	474
+// Mauritania	MR	MRT	478
+// Mauritius	MU	MUS	480
+// Mayotte	YT	MYT	175
+// Mexico	MX	MEX	484
+// Micronesia (Federated States of)	FM	FSM	583
+// Moldova (the Republic of)	MD	MDA	498
+// Monaco	MC	MCO	492
+// Mongolia	MN	MNG	496
+// Montenegro	ME	MNE	499
+// Montserrat	MS	MSR	500
+// Morocco	MA	MAR	504
+// Mozambique	MZ	MOZ	508
+// Myanmar	MM	MMR	104
+// Namibia	NA	NAM	516
+// Nauru	NR	NRU	520
+// Nepal	NP	NPL	524
+// Netherlands (the)	NL	NLD	528
+// New Caledonia	NC	NCL	540
+// New Zealand	NZ	NZL	554
+// Nicaragua	NI	NIC	558
+// Niger (the)	NE	NER	562
+// Nigeria	NG	NGA	566
+// Niue	NU	NIU	570
+// Norfolk Island	NF	NFK	574
+// Northern Mariana Islands (the)	MP	MNP	580
+// Norway	NO	NOR	578
+// Oman	OM	OMN	512
+// Pakistan	PK	PAK	586
+// Palau	PW	PLW	585
+// Palestine, State of	PS	PSE	275
+// Panama	PA	PAN	591
+// Papua New Guinea	PG	PNG	598
+// Paraguay	PY	PRY	600
+// Peru	PE	PER	604
+// Philippines (the)	PH	PHL	608
+// Pitcairn	PN	PCN	612
+// Poland	PL	POL	616
+// Portugal	PT	PRT	620
+// Puerto Rico	PR	PRI	630
+// Qatar	QA	QAT	634
+// Republic of North Macedonia	MK	MKD	807
+// Romania	RO	ROU	642
+// Russian Federation (the)	RU	RUS	643
+// Rwanda	RW	RWA	646
+// Réunion	RE	REU	638
+// Saint Barthélemy	BL	BLM	652
+// Saint Helena, Ascension and Tristan da Cunha	SH	SHN	654
+// Saint Kitts and Nevis	KN	KNA	659
+// Saint Lucia	LC	LCA	662
+// Saint Martin (French part)	MF	MAF	663
+// Saint Pierre and Miquelon	PM	SPM	666
+// Saint Vincent and the Grenadines	VC	VCT	670
+// Samoa	WS	WSM	882
+// San Marino	SM	SMR	674
+// Sao Tome and Principe	ST	STP	678
+// Saudi Arabia	SA	SAU	682
+// Senegal	SN	SEN	686
+// Serbia	RS	SRB	688
+// Seychelles	SC	SYC	690
+// Sierra Leone	SL	SLE	694
+// Singapore	SG	SGP	702
+// Sint Maarten (Dutch part)	SX	SXM	534
+// Slovakia	SK	SVK	703
+// Slovenia	SI	SVN	705
+// Solomon Islands	SB	SLB	090
+// Somalia	SO	SOM	706
+// South Africa	ZA	ZAF	710
+// South Georgia and the South Sandwich Islands	GS	SGS	239
+// South Sudan	SS	SSD	728
+// Spain	ES	ESP	724
+// Sri Lanka	LK	LKA	144
+// Sudan (the)	SD	SDN	729
+// Suriname	SR	SUR	740
+// Svalbard and Jan Mayen	SJ	SJM	744
+// Sweden	SE	SWE	752
+// Switzerland	CH	CHE	756
+// Syrian Arab Republic	SY	SYR	760
+// Taiwan (Province of China)	TW	TWN	158
+// Tajikistan	TJ	TJK	762
+// Tanzania, United Republic of	TZ	TZA	834
+// Thailand	TH	THA	764
+// Timor-Leste	TL	TLS	626
+// Togo	TG	TGO	768
+// Tokelau	TK	TKL	772
+// Tonga	TO	TON	776
+// Trinidad and Tobago	TT	TTO	780
+// Tunisia	TN	TUN	788
+// Turkey	TR	TUR	792
+// Turkmenistan	TM	TKM	795
+// Turks and Caicos Islands (the)	TC	TCA	796
+// Tuvalu	TV	TUV	798
+// Uganda	UG	UGA	800
+// Ukraine	UA	UKR	804
+// United Arab Emirates (the)	AE	ARE	784
+// United Kingdom of Great Britain and Northern Ireland (the)	GB	GBR	826
+// United States Minor Outlying Islands (the)	UM	UMI	581
+// United States of America (the)	US	USA	840
+// Uruguay	UY	URY	858
+// Uzbekistan	UZ	UZB	860
+// Vanuatu	VU	VUT	548
+// Venezuela (Bolivarian Republic of)	VE	VEN	862
+// Viet Nam	VN	VNM	704
+// Virgin Islands (British)	VG	VGB	092
+// Virgin Islands (U.S.)	VI	VIR	850
+// Wallis and Futuna	WF	WLF	876
+// Western Sahara	EH	ESH	732
+// Yemen	YE	YEM	887
+// Zambia	ZM	ZMB	894
+// Zimbabwe	ZW	ZWE	716
+// Åland Islands	AX	ALA	248
