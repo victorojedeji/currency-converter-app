@@ -74,6 +74,8 @@ label, #input-field {
     width: 50px;
     border-top-left-radius: .3em;
     border-bottom-left-radius: .3em;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .selected-currency-name {
