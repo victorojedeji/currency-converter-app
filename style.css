@@ -64,13 +64,6 @@ label, #input-field {
     text-transform: capitalize;
 }
 
-
-
-.options-wrapper input {
-    
-}
-
-
 .options-wrapper img {
     width: 50px;
     border-top-left-radius: .3em;
@@ -134,3 +127,4 @@ label, #input-field {
 .country li {
     list-style: none;
 }
+
