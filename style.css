@@ -121,10 +121,52 @@ label, #input-field {
 }
 
 .country {
-    border: 1px solid black;
+    display: none;
+    width: 40%;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+
+.main.active .country {
+    display: block;
+}
+
+.country-select {
+    height: 10rem;
+    overflow-y: auto;
+    overflow-x: auto;
+    line-height: 2;
+}
+
+.country-select li:hover {
+    background: #f7f5f5;
+    cursor: pointer;
+}
+
+.country-select::-webkit-scrollbar {
+    width: 5px;
+}
+
+.country-select::-webkit-scrollbar-thumb {
+    background: #5f9ea0;
+}
+
+.country-select::-webkit-scrollbar-thumb:hover {
+    background: #113031;
+}
+
+.country-select::-webkit-scrollbar-track {
+    background: #f7f5f5;
+}
+
+.country p {
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+    color: #113031;
 }
 
 .country li {
     list-style: none;
 }
-
