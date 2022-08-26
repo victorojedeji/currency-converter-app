@@ -8,8 +8,9 @@ body {
     font-size: 1rem;
     display: flex;
     justify-content: center;
-    margin-top: 10em;
+    align-items: center;
     background-color: #5f9ea0;
+    height: 100vh;
 }
 
 main {
@@ -124,4 +125,12 @@ label, #input-field {
 .options-wrapper:hover {
     outline: 2px solid #5f9ea0;
     border: 1px solid #5f9ea0;
+}
+
+.country {
+    border: 1px solid black;
+}
+
+.country li {
+    list-style: none;
 }
