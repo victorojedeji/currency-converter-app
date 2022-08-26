@@ -1,10 +1,32 @@
 const countryInput = document.querySelectorAll(".country-input");
 const main = document.querySelector(".main");
+const countrySelect = main.querySelector(".country-select");
+
+let subArr = [];
+let superArr = [];
+
+
+function countryNameData() {
+    for (i = 0; i < countryCodes.length; i++) {
+        let countrys = countryCodes[i].country;
+        subArr.push(countrys)
+    }
+    return subArr;
+}
+
+console.log(countryNameData());
+
+
+// let countrysList = "<li>" + superArr + "</li>";
+//     countrySelect.innerHTML = countrysList;
+
+
 
 
 countryInput.forEach(item => {
     item.onkeyup = (e) => {
         let countryData = e.target.value;
+
         if (countryData) {
             main.classList.add("active");
         } else {
@@ -13,6 +35,7 @@ countryInput.forEach(item => {
         console.log(main)
     }
 });
+
 
 
 
