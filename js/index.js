@@ -4,36 +4,59 @@ const countrySelect = main.querySelector(".country-select");
 
 
 
+
+
+
+
+    let arr = [];
+    let subArr = [];
+    let superArr = [];
+    let listData;
+    let countryList;
+
+        // let countrys = "<li>" + countryList + "</li>";
+        // subArr.push(countrys)
+        // listData = subArr.join("");
+        // countrySelect.innerHTML = listData;
+
 countryInput.forEach(item => {
     item.onkeyup = (e) => {
         let countryData = e.target.value;
 
-        if (countryData) {
-            main.classList.add("active");
-        } else {
-            main.classList.remove("active")
-        }
-        console.log(main)
+        for (i = 0; i < countryCodes.length; i++) {
+            countryList = countryCodes[i].country;
+        
+            arr.push(countryList);
+              
+            if (countryData) {
+                main.classList.add("active");
+                subArr = arr.filter((data) => {
+                    return data.toLowerCase().startsWith(countryData.toLowerCase());
+                })
+
+                superArr = subArr.map((data) => {
+                    return data = "<li>" + data + "</li>";
+                });
+
+                
+                console.log(superArr)
+
+                countryList = superArr.join("");
+
+                return countrySelect.innerHTML = countryList;
+
+
+            } else {
+                main.classList.remove("active")
+            };
+
+        }      
+           console.log(countryList)         
     }
 });
+    
 
 
-
-
-function countryNameData() {
-    let subArr = [];
-    for (i = 0; i < countryCodes.length; i++) {
-        let countrys = "<li>" + countryCodes[i].country + "</li>";
-        subArr.push(countrys)
-        listData =subArr.join("");
-        countrySelect.innerHTML = listData;
-    }
-}
-
-countryNameData()
-
-// let countrysList = "<li>" + superArr + "</li>";
-//     countrySelect.innerHTML = countrysList;
 
 
 
