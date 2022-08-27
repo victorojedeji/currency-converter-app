@@ -2,25 +2,6 @@ const countryInput = document.querySelectorAll(".country-input");
 const main = document.querySelector(".main");
 const countrySelect = main.querySelector(".country-select");
 
-let subArr = [];
-let superArr = [];
-
-
-function countryNameData() {
-    for (i = 0; i < countryCodes.length; i++) {
-        let countrys = countryCodes[i].country;
-        subArr.push(countrys)
-    }
-    return subArr;
-}
-
-console.log(countryNameData());
-
-
-// let countrysList = "<li>" + superArr + "</li>";
-//     countrySelect.innerHTML = countrysList;
-
-
 
 
 countryInput.forEach(item => {
@@ -36,6 +17,23 @@ countryInput.forEach(item => {
     }
 });
 
+
+
+
+function countryNameData() {
+    let subArr = [];
+    for (i = 0; i < countryCodes.length; i++) {
+        let countrys = "<li>" + countryCodes[i].country + "</li>";
+        subArr.push(countrys)
+        listData =subArr.join("");
+        countrySelect.innerHTML = listData;
+    }
+}
+
+countryNameData()
+
+// let countrysList = "<li>" + superArr + "</li>";
+//     countrySelect.innerHTML = countrysList;
 
 
 
