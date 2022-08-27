@@ -2,84 +2,33 @@ const countryInput = document.querySelectorAll(".country-input");
 const main = document.querySelector(".main");
 const countrySelect = main.querySelector(".country-select");
 
+let countryList = [];
 
+countryList = countryCodes.map((obj) => obj.country);
 
-
-
-
-
-    let arr = [];
-    let subArr = [];
-    let superArr = [];
-    let listData;
-    let countryList;
-
-        // let countrys = "<li>" + countryList + "</li>";
-        // subArr.push(countrys)
-        // listData = subArr.join("");
-        // countrySelect.innerHTML = listData;
 
 countryInput.forEach(item => {
-    item.onkeyup = (e) => {
-        let countryData = e.target.value;
+    item.onkeyup = e => {
+        let userData = e.target.value;
 
-        for (i = 0; i < countryCodes.length; i++) {
-            countryList = countryCodes[i].country;
-        
-            arr.push(countryList);
-              
-            if (countryData) {
-                main.classList.add("active");
-                subArr = arr.filter((data) => {
-                    return data.toLowerCase().startsWith(countryData.toLowerCase());
-                })
+        if (userData) {
+            main.classList.add("active");
+            arr = countryList.filter((data) => {
+                return data.toLowerCase().startsWith(userData.toLowerCase());
+            });
+            superArr = arr.map((data) => {
+                return data = "<li>" + data + "</li>";
+            });
 
-                superArr = subArr.map((data) => {
-                    return data = "<li>" + data + "</li>";
-                });
+            let list = superArr.join("");
 
-                
-                console.log(superArr)
-
-                countryList = superArr.join("");
-
-                return countrySelect.innerHTML = countryList;
-
-
-            } else {
-                main.classList.remove("active")
-            };
-
-        }      
-           console.log(countryList)         
+            countrySelect.innerHTML = list;
+        } else {
+            main.classList.remove("active")
+        };
     }
-});
-    
+})
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// countryInput.onkeyup = (e) => {
-//     let countryData = e.target.value;
-
-//     if (countryData) {
-//         main.classList.add("active");
-//     } else {
-//         main.classList.remove("active")
-//     }
-//     console.log(main)
-// }
 
 
 // let url = 'https://v6.exchangerate-api.com/v6/bea4b32831177324429bcd29/latest/USD';
