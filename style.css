@@ -175,3 +175,12 @@ label, #input-field {
 .country li {
     list-style: none;
 }
+.code {
+    display: inline;
+}
+
+.tag-holder {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}

@@ -396,7 +396,7 @@ let countryCodes = [
         currency: "Comoro Franc",
     },
     {
-        country: "the republic of korea",
+        country: "korea",
         code: "KRW",
         flag: "KR",
         currency: "Won",
@@ -960,7 +960,7 @@ let countryCodes = [
         currency: "CFP Franc",
     },
     {
-        country: "yemeni",
+        country: "yemen",
         code: "YER",
         flag: "YE",
         currency: "Yemeni Rial",

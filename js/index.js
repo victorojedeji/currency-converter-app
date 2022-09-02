@@ -2,14 +2,20 @@ const countryInput = document.querySelectorAll(".country-input");
 
 const inputOne = document.querySelector("#input-one");
 const inputTwo = document.querySelector("#input-two");
+const selectedCurrencyOne = document.querySelector("#currency-one");
+const selectedCurrencyTwo = document.querySelector("#currency-two");
+const selectedCodeOne = document.querySelector("#code-one");
+const selectedCodeTwo = document.querySelector("#code-two");
 const errorTxt = document.querySelector(".error");
 
 const main = document.querySelector(".main");
 const countrySelect = main.querySelector(".country-select");
 
+
+
+
 countryList = countryCodes.map((obj) => obj.country);
-codeArr = countryCodes.map((obj) => obj.code);
-currencyArr = countryCodes.map((obj) => obj.currency);
+
 
 countryInput.forEach(item => {
     item.onkeyup = e => {
@@ -44,15 +50,27 @@ countryInput.forEach(item => {
 }
 
 function clicked(ele) {
-   let name = ele.textContent;
+    let attr = this.event.target.getAttribute("title")
+    let objINeed = null;
+    countryCodes.map( obj => {
+        if(obj.country === attr) {
+            objINeed = obj;
+            return objINeed;
+        }
+    });
+    
     
     if ((inputOne.value !== "") && (inputTwo.value === "")){
-        inputOne.value = name;
+        inputOne.value = attr;
+        selectedCurrencyOne.textContent = objINeed.currency;
+        selectedCodeOne.textContent = objINeed.code;
         }
     
     
     if((inputOne.value.length > 1) && (inputTwo.value.length >= 1)) {
-        inputTwo.value = name;
+        inputTwo.value = attr;
+        selectedCurrencyTwo.textContent = objINeed.currency;
+        selectedCodeTwo.textContent = objINeed.code;
     }
     
     
@@ -61,21 +79,6 @@ function clicked(ele) {
         inputTwo.value = "";
         setTimeout(clearErrorMsg, 7000);
     }
-
-    
-    let attr = this.event.target.getAttribute("title")
-    let objINeed = null;
-    countryCodes.map((obj) => {
-        if(obj.country === attr) {
-            objINeed = obj;
-            return objINeed;
-        }
-    })
-
-    
-    
-
-    
     main.classList.remove("active")
 };
 
