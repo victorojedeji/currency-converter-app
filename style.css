@@ -99,6 +99,7 @@ label, #input-field {
     padding: .5em;
     margin: 0;
     border-radius: .3em;
+    text-transform: capitalize;
 }
 
 .country-input:active,
@@ -140,6 +141,7 @@ label, #input-field {
     overflow-y: auto;
     overflow-x: auto;
     line-height: 2;
+    text-transform: capitalize;
 }
 
 .country-select li:hover {

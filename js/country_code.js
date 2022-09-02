@@ -426,7 +426,7 @@ let countryCodes = [
         currency: "Kip",
     },
     {
-        country: "Lebanese",
+        country: "Lebanon",
         code: "LBP",
         flag: "LB",
         currency: "Lebanese Pound",
@@ -1135,6 +1135,11 @@ let countryCodes = [
     },
 
 ];
+
+// let code = [...new Map(countryCodes.map(item => [item["country"], item])).values()]
+// console.log(code)
+
+
 
 
 // 	Afghani	AFN	971

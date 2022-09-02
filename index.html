@@ -8,22 +8,22 @@
     </head>
     <body>
         
-        <main class="main active"> 
+        <main class="main"> 
             <h2>currency calculator</h2>
 
             <label for="input-field">Enter Amount</label>
             <input type="text" id="input-field" value="" placeholder="Write in the amount...">
             
-            
+            <p class="error"></p>
             <div class="pick">
                 <div class="option-section">
                     <p class="what">from</p>
                     <div class="options-wrapper">
                         <img src = "https://countryflagsapi.com/svg/ng" />
 
-                        <input type="text" placeholder="Country Name..." class="country-input">
+                        <input type="text" placeholder="Country Name..." class="country-input" id="input-one">
                     </div>  
-                    <p class="selected-currency-name">Naira</p>
+                    <p class="selected-currency-name">Naira <span class="code">NGN</span></p>
                     
                     
                 </div>
@@ -37,9 +37,9 @@
                     <div class="options-wrapper">
                         <img src = "https://countryflagsapi.com/svg/us" />
 
-                        <input type="text" placeholder="Country Name..." class="country-input">
+                        <input type="text" placeholder="Country Name...." class="country-input" id="input-two">
                     </div>  
-                    <p class="selected-currency-name">Us Dollars</p>
+                    <p class="selected-currency-name">Us Dollars <span class="code">USD</span></p>
                     
                 </div>
             </div>
@@ -55,6 +55,6 @@
         </main>
         
         <script src="js/country_code.js"></script>
-        <script src="js/index.js"></script>
+       <script src="js/index.js"></script>
     </body>
 </html>
