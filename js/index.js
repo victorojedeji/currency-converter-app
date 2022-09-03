@@ -6,10 +6,16 @@ const selectedCurrencyOne = document.querySelector("#currency-one");
 const selectedCurrencyTwo = document.querySelector("#currency-two");
 const selectedCodeOne = document.querySelector("#code-one");
 const selectedCodeTwo = document.querySelector("#code-two");
+
+const flagOne = document.querySelector("#flag-one");
+const flagTwo = document.querySelector("#flag-two");
+
 const errorTxt = document.querySelector(".error");
 
 const main = document.querySelector(".main");
 const countrySelect = main.querySelector(".country-select");
+const convertBtn = document.querySelector(".convert-btn");
+
 
 
 
@@ -64,6 +70,7 @@ function clicked(ele) {
         inputOne.value = attr;
         selectedCurrencyOne.textContent = objINeed.currency;
         selectedCodeOne.textContent = objINeed.code;
+        flagOne.setAttribute("src", `"https://countryflagsapi.com/svg/${objINeed.flag}"`);
         }
     
     
@@ -71,6 +78,8 @@ function clicked(ele) {
         inputTwo.value = attr;
         selectedCurrencyTwo.textContent = objINeed.currency;
         selectedCodeTwo.textContent = objINeed.code;
+     flagTwo.setAttribute("src", `"https://countryflagsapi.com/svg/${objINeed.flag}"`);
+
     }
     
     
@@ -86,8 +95,10 @@ function clearErrorMsg() {
     errorTxt.textContent = "";
 }
 
-
-
+convertBtn.addEventListener("click", convertion);
+function convertion() {
+    
+};
 
 // let url = 'https://v6.exchangerate-api.com/v6/bea4b32831177324429bcd29/latest/USD';
 
