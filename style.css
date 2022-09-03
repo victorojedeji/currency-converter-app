@@ -77,7 +77,7 @@ label, #input-field {
 }
 
 .icon {
-    margin-top: 1em;
+    margin-top: 1.5em;
 }
 
 .fa-exchange {
@@ -183,4 +183,20 @@ label, #input-field {
     display: flex;
     justify-content: center;
     gap: 10px;
+}
+
+.convert-btn {
+    margin-top: 1em;
+    padding: .5em 3em;
+    text-transform: capitalize;
+    background: #5f9ea0;
+    border: 1px solid #5f9ea0;
+    border-radius: .4em;
+    color: #fff;
+    transition: .5s;
+}
+
+.convert-btn:hover {
+    background-color: #113031;
+    border: 1px solid #113031;
 }

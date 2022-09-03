@@ -71,6 +71,7 @@ function clicked(ele) {
         selectedCurrencyOne.textContent = objINeed.currency;
         selectedCodeOne.textContent = objINeed.code;
         flagOne.setAttribute("src", `"https://countryflagsapi.com/svg/${objINeed.flag}"`);
+        errorTxt.textContent = "";
         }
     
     
@@ -93,7 +94,7 @@ function clicked(ele) {
 
 function clearErrorMsg() {
     errorTxt.textContent = "";
-}
+};
 
 convertBtn.addEventListener("click", convertion);
 function convertion() {
