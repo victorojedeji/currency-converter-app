@@ -88,6 +88,7 @@ function clicked(ele) {
         inputTwo.value = attr;
         selectedCurrencyTwo.textContent = objINeed.currency;
         selectedCodeTwo.textContent = objINeed.code;
+        selectedCodeTwo.setAttribute('title', `${objINeed.code}`)
 
         if(inputTwo.value === "") {
             flagTwo.style.display = "none";
