@@ -118,6 +118,7 @@ function convertion() {
     }
 
     let toCur = selectedCodeOne.getAttribute("title");
+    let fromCur = selectedCodeTwo.getAttribute("title");
     let toUrl = 'https://v6.exchangerate-api.com/v6/bea4b32831177324429bcd29/latest/' + toCur;
     fetch(toUrl).then(res => res.json()).then(result => {
         console.log(result);
