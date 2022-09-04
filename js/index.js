@@ -1,5 +1,6 @@
 const countryInput = document.querySelectorAll(".country-input");
 
+const amount = document.querySelector("#input-field")
 const inputOne = document.querySelector("#input-one");
 const inputTwo = document.querySelector("#input-two");
 const selectedCurrencyOne = document.querySelector("#currency-one");
@@ -66,11 +67,15 @@ function clicked(ele) {
     });
     
     
-    if ((inputOne.value !== "") && (inputTwo.value === "")){
+    if (((inputOne.value !== "") && (inputTwo.value === ""))) {
         inputOne.value = attr;
         selectedCurrencyOne.textContent = objINeed.currency;
-        selectedCodeOne.textContent = objINeed.code;
-        flagOne.setAttribute("src", `"https://countryflagsapi.com/svg/${objINeed.flag}"`);
+        selectedCodeOne.textContent = objINeed.code; 
+
+        if(inputOne.value === "") {
+            flagOne.style.display = "none";
+        }else flagOne.setAttribute("src", `https://countryflagsapi.com/svg/${objINeed.flag}`);
+
         errorTxt.textContent = "";
         }
     
@@ -79,7 +84,11 @@ function clicked(ele) {
         inputTwo.value = attr;
         selectedCurrencyTwo.textContent = objINeed.currency;
         selectedCodeTwo.textContent = objINeed.code;
-     flagTwo.setAttribute("src", `"https://countryflagsapi.com/svg/${objINeed.flag}"`);
+
+        if(inputTwo.value === "") {
+            flagTwo.style.display = "none";
+        }else flagTwo.setAttribute("src", `https://countryflagsapi.com/svg/${objINeed.flag}`)
+
 
     }
     
@@ -98,18 +107,19 @@ function clearErrorMsg() {
 
 convertBtn.addEventListener("click", convertion);
 function convertion() {
+
+    if((amount.value == "") || (amount.value == 0)){
+        amount.value = 1
+    }
+
+    let url = 'https://v6.exchangerate-api.com/v6/bea4b32831177324429bcd29/latest/USD';
+
+    fetch(url).then(res => res.json()).then(result => {
+        console.log(result);
+    })
+     
+
     
 };
 
-// let url = 'https://v6.exchangerate-api.com/v6/bea4b32831177324429bcd29/latest/USD';
 
-// fetch(url).then(res => res.json()).then(result => {
-  //  console.log(result);
- // })
-
-// let countryId = countryCodes;
-// console.log(countryId)
-
-// for(i = 0; i < countryId.length; i++) {
-  //  console.log(countryId[i].code)
-// }
