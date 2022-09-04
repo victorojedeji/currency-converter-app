@@ -56,8 +56,11 @@ countryInput.forEach(item => {
      
 }
 
+
+
+
 function clicked(ele) {
-    let attr = this.event.target.getAttribute("title")
+    let attr = this.event.target.getAttribute("title");
     let objINeed = null;
     countryCodes.map( obj => {
         if(obj.country === attr) {
@@ -71,6 +74,7 @@ function clicked(ele) {
         inputOne.value = attr;
         selectedCurrencyOne.textContent = objINeed.currency;
         selectedCodeOne.textContent = objINeed.code; 
+        selectedCodeOne.setAttribute('title', `${objINeed.code}`)
 
         if(inputOne.value === "") {
             flagOne.style.display = "none";
@@ -112,9 +116,10 @@ function convertion() {
         amount.value = 1
     }
 
-    let url = 'https://v6.exchangerate-api.com/v6/bea4b32831177324429bcd29/latest/USD';
-
-    fetch(url).then(res => res.json()).then(result => {
+    let toCur = selectedCodeOne.getAttribute("title");
+    let toUrl = 'https://v6.exchangerate-api.com/v6/bea4b32831177324429bcd29/latest/' + toCur;
+    console.log(toUrl)
+    fetch(toUrl).then(res => res.json()).then(result => {
         console.log(result);
     })
      
