@@ -17,12 +17,7 @@ const main = document.querySelector(".main");
 const countrySelect = main.querySelector(".country-select");
 const convertBtn = document.querySelector(".convert-btn");
 
-
-
-
-
 countryList = countryCodes.map((obj) => obj.country);
-
 
 countryInput.forEach(item => {
     item.onkeyup = e => {
@@ -47,17 +42,13 @@ countryInput.forEach(item => {
     };
 })
 
-
- function clickable() {
-     let lines = document.querySelectorAll("li");
+function clickable() {
+    let lines = document.querySelectorAll("li");
     lines.forEach((li) => {
         li.setAttribute("onclick", "clicked(this)");
     })
      
 }
-
-
-
 
 function clicked(ele) {
     let attr = this.event.target.getAttribute("title");
@@ -81,7 +72,7 @@ function clicked(ele) {
         }else flagOne.setAttribute("src", `https://countryflagsapi.com/svg/${objINeed.flag}`);
 
         errorTxt.textContent = "";
-        }
+    }
     
     
     if((inputOne.value.length > 1) && (inputTwo.value.length >= 1)) {
@@ -123,9 +114,6 @@ function convertion() {
     fetch(toUrl).then(res => res.json()).then(result => {
         console.log(result);
     })
-     
-
-    
 };
 
 
