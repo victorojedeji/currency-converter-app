@@ -102,17 +102,19 @@ function clearErrorMsg() {
 };
 
 convertBtn.addEventListener("click", convertion);
+
 function convertion() {
 
     if((amount.value == "") || (amount.value == 0)){
         amount.value = 1
     }
 
-    let toCur = selectedCodeOne.getAttribute("title");
-    let fromCur = selectedCodeTwo.getAttribute("title");
-    let toUrl = 'https://v6.exchangerate-api.com/v6/bea4b32831177324429bcd29/latest/' + toCur;
-    fetch(toUrl).then(res => res.json()).then(result => {
-        console.log(result);
+    let fromCur = selectedCodeOne.getAttribute("title");
+    let toCur = selectedCodeTwo.getAttribute("title");
+    let fromUrl = 'https://v6.exchangerate-api.com/v6/bea4b32831177324429bcd29/latest/' + fromCur;
+    fetch(fromUrl).then(res => res.json()).then(result => {
+        let exchangeRate = result.conversion_rates[toCur];
+        let definedRate = Number(amount.value) * exchangeRate;
     })
 };
 
