@@ -113,13 +113,13 @@ function convertion() {
 
     let fromCur = selectedCodeOne.getAttribute("title");
     let toCur = selectedCodeTwo.getAttribute("title");
+    fromExchange.textContent = "Loading...";
+    toExchange.textContent = "Loading...";
     let fromUrl = 'https://v6.exchangerate-api.com/v6/bea4b32831177324429bcd29/latest/' + fromCur;
     fetch(fromUrl).then(res => res.json()).then(result => {
         let exchangeRate = result.conversion_rates[toCur];
         let userAmount = amount.value;
-        console.log(userAmount);
-        let definedRate = Number(userAmount) * exchangeRate;
-        console.log(definedRate);
+        let definedRate = (Number(userAmount) * exchangeRate).toFixed(2);
         fromExchange.textContent = userAmount;
         toExchange.textContent = definedRate;
     })
