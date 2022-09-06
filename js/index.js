@@ -7,6 +7,8 @@ const selectedCurrencyOne = document.querySelector("#currency-one");
 const selectedCurrencyTwo = document.querySelector("#currency-two");
 const selectedCodeOne = document.querySelector("#code-one");
 const selectedCodeTwo = document.querySelector("#code-two");
+const fromExchange = document.querySelector(".from-exchange");
+const toExchange = document.querySelector(".to-exchange");
 
 const flagOne = document.querySelector("#flag-one");
 const flagTwo = document.querySelector("#flag-two");
@@ -114,7 +116,12 @@ function convertion() {
     let fromUrl = 'https://v6.exchangerate-api.com/v6/bea4b32831177324429bcd29/latest/' + fromCur;
     fetch(fromUrl).then(res => res.json()).then(result => {
         let exchangeRate = result.conversion_rates[toCur];
-        let definedRate = Number(amount.value) * exchangeRate;
+        let userAmount = amount.value;
+        console.log(userAmount);
+        let definedRate = Number(userAmount) * exchangeRate;
+        console.log(definedRate);
+        fromExchange.textContent = userAmount;
+        toExchange.textContent = definedRate;
     })
 };
 
