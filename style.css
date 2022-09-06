@@ -24,6 +24,9 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    box-shadow: 1px -2px 19px -5px rgba(0,0,0,0.62);
+    -webkit-box-shadow: 1px -2px 19px -5px rgba(0,0,0,0.62);
+    -moz-box-shadow: 1px -2px 19px -5px rgba(0,0,0,0.62);
 }
 
 h2 {
@@ -47,8 +50,10 @@ label, #input-field {
     
 #input-field:active,
 #input-field:focus {
-    outline: 2px solid #5f9ea0;
-    border: 1px solid #5f9ea0;
+    border: 1px solid rgba(0,0,0,0.42);
+    box-shadow: 1px -2px 17px -5px rgba(0,0,0,0.42);
+    -webkit-box-shadow: 1px -2px 17px -5px rgba(0,0,0,0.42);
+    -moz-box-shadow: 1px -2px 17px -5px rgba(0,0,0,0.42);
 }
 
 .pick {
@@ -116,9 +121,12 @@ label, #input-field {
 
 .options-wrapper:active,
 .options-wrapper:focus,
-.options-wrapper:hover {
-    outline: 2px solid #5f9ea0;
-    border: 1px solid #5f9ea0;
+.options-wrapper:hover
+ { 
+    border: 1px solid rgba(0,0,0,0.42);
+    box-shadow: 1px -2px 17px -5px rgba(0,0,0,0.42);
+    -webkit-box-shadow: 1px -2px 17px -5px rgba(0,0,0,0.42);
+    -moz-box-shadow: 1px -2px 17px -5px rgba(0,0,0,0.42);
 }
 
 .country {
@@ -205,4 +213,7 @@ label, #input-field {
 .convert-btn:hover {
     background-color: #113031;
     border: 1px solid #113031;
+    box-shadow: 1px -2px 17px -5px rgba(0,0,0,0.42);
+    -webkit-box-shadow: 1px -2px 17px -5px rgba(0,0,0,0.42);
+    -moz-box-shadow: 1px -2px 17px -5px rgba(0,0,0,0.42);
 }
