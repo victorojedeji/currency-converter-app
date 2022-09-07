@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;1,300&display=swap');
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -82,10 +85,10 @@ label, #input-field {
 }
 
 .icon {
-    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
-.fa-exchange {
+/* .fa-exchange {
     transition: .5s;
 }
 .fa-exchange:hover,
@@ -95,7 +98,7 @@ label, #input-field {
 
 .fa-exchange:active {
     color: #113031;
-}
+} */
 
 .country-input {
     border: none;
@@ -196,7 +199,9 @@ label, #input-field {
 .exchangerate {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 5px;
+    margin-top: .3em;
 }
 
 .convert-btn {
@@ -216,4 +221,14 @@ label, #input-field {
     box-shadow: 1px -2px 17px -5px rgba(0,0,0,0.42);
     -webkit-box-shadow: 1px -2px 17px -5px rgba(0,0,0,0.42);
     -moz-box-shadow: 1px -2px 17px -5px rgba(0,0,0,0.42);
+}
+
+.dim {
+    color: rgba(0,0,0,0.7);
+    font-size: .7rem;
+}
+
+.from-exchange,
+.to-exchange {
+    font-size: .85rem;
 }
